@@ -1,0 +1,88 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - heading "Selected Works" [level=1] [ref=e4]
+      - paragraph [ref=e5]: High-conversion thumbnails and social media creative. A private vault of recent commissions and personal projects.
+      - link "Inquire for availability" [ref=e6] [cursor=pointer]:
+        - /url: mailto:hrqadri@gmail.com
+  - generic [ref=e8]:
+    - button "All Work" [pressed] [ref=e9] [cursor=pointer]
+    - button "Thumbnails" [ref=e10] [cursor=pointer]
+    - button "Social Posts" [ref=e11] [cursor=pointer]
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - article [ref=e14] [cursor=pointer]:
+        - img "CvivorsYT 01" [ref=e16]
+      - article [ref=e17] [cursor=pointer]:
+        - img "CvivorsYT 02" [ref=e19]
+      - article [ref=e20] [cursor=pointer]:
+        - img "CvivorsYT 03" [ref=e22]
+      - article [ref=e23] [cursor=pointer]:
+        - img "Fortnite 01" [ref=e25]
+      - article [ref=e26] [cursor=pointer]:
+        - img "Fortnite 02" [ref=e28]
+      - article [ref=e29] [cursor=pointer]:
+        - img "Fortnite 03" [ref=e31]
+      - article [ref=e32] [cursor=pointer]:
+        - img "EliteTeam 01" [ref=e34]
+      - article [ref=e35] [cursor=pointer]:
+        - img "EliteTeam 02" [ref=e37]
+      - article [ref=e38] [cursor=pointer]:
+        - img "EliteTeam 03" [ref=e40]
+      - article [ref=e41] [cursor=pointer]:
+        - img "GamerTonics 01" [ref=e43]
+      - article [ref=e44] [cursor=pointer]:
+        - img "GamerTonics 02" [ref=e46]
+      - article [ref=e47] [cursor=pointer]:
+        - img "GamerTonics 03" [ref=e49]
+      - article [ref=e50] [cursor=pointer]:
+        - img "Just Wing It 01" [ref=e52]
+      - article [ref=e53] [cursor=pointer]:
+        - img "Just Wing It 02" [ref=e55]
+      - article [ref=e56] [cursor=pointer]:
+        - img "Just Wing It 03" [ref=e58]
+      - article [ref=e59] [cursor=pointer]:
+        - img "Massive Soccer Coaching (Elite Soccer Academy) 01" [ref=e61]
+      - article [ref=e62] [cursor=pointer]:
+        - img "Massive Soccer Coaching (Elite Soccer Academy) 02" [ref=e64]
+      - article [ref=e65] [cursor=pointer]:
+        - img "Massive Soccer Coaching (Elite Soccer Academy) 03" [ref=e67]
+      - article [ref=e68] [cursor=pointer]:
+        - img "Me2Myself 01" [ref=e70]
+      - article [ref=e71] [cursor=pointer]:
+        - img "MJ Education Corporation 01" [ref=e73]
+      - article [ref=e74] [cursor=pointer]:
+        - img "MJ Education Corporation 02" [ref=e76]
+      - article [ref=e77] [cursor=pointer]:
+        - img "MJ Education Corporation 03" [ref=e79]
+      - article [ref=e80] [cursor=pointer]:
+        - img "OneSourceDirect 01" [ref=e82]
+      - article [ref=e83] [cursor=pointer]:
+        - img "OneSourceDirect 02" [ref=e85]
+      - article [ref=e86] [cursor=pointer]:
+        - img "OneSourceDirect 03" [ref=e88]
+      - article [ref=e89] [cursor=pointer]:
+        - img "SolarMoon 01" [ref=e91]
+      - article [ref=e92] [cursor=pointer]:
+        - img "SolarMoon 02" [ref=e94]
+      - article [ref=e95] [cursor=pointer]:
+        - img "SolarMoon 03" [ref=e97]
+      - article [ref=e98] [cursor=pointer]:
+        - img "StrongerThanT2Diabetes 01" [ref=e100]
+      - article [ref=e101] [cursor=pointer]:
+        - img "StrongerThanT2Diabetes 02" [ref=e103]
+      - article [ref=e104] [cursor=pointer]:
+        - img "StrongerThanT2Diabetes 03" [ref=e106]
+      - article [ref=e107] [cursor=pointer]:
+        - img "WeFFix 01" [ref=e109]
+      - article [ref=e110] [cursor=pointer]:
+        - img "WeFFix 02" [ref=e112]
+      - article [ref=e113] [cursor=pointer]:
+        - img "WeFFix 03" [ref=e115]
+      - article [ref=e116] [cursor=pointer]:
+        - img "WePark 01" [ref=e118]
+      - article [ref=e119] [cursor=pointer]:
+        - img "WePark 02" [ref=e121]
+      - article [ref=e122] [cursor=pointer]:
+        - img "WePark 07" [ref=e124]
+  - text:   

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-[#0a0a0a]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>THE CREATIVE VAULT &mdash; Industrial Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        industrial: {
+                            bg: '#0a0a0a',
+                            fg: '#eaeaea',
+                            border: '#262626',
+                            muted: '#a3a3a3',
+                            accent: '#E61919',
+                            success: '#4AF626'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+        body {
+            background-color: #0a0a0a;
+            color: #eaeaea;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        ::selection {
+            background-color: #eaeaea;
+            color: #0a0a0a;
+        }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="min-h-[100dvh] flex flex-col font-mono text-industrial-fg relative">
+
+    <!-- Mechanical Noise Overlay -->
+    <div class="pointer-events-none fixed inset-0 z-[100] opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+
+    <!-- Header -->
+    <header class="border-b border-industrial-border bg-industrial-bg relative z-40">
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between text-[10px] sm:text-xs uppercase tracking-widest">
+            <div class="flex items-center gap-4">
+                <span class="font-bold tracking-widest font-sans text-sm">THE CREATIVE VAULT</span>
+                <span class="text-industrial-muted hidden sm:inline-block border-l border-industrial-border pl-4">
+                    [ ONLINE_STATUS = <span class="text-industrial-success">ACTIVE</span> ]
+                </span>
+            </div>
+            <a href="mailto:hrqadri@gmail.com" class="hover:bg-industrial-fg hover:text-industrial-bg transition-colors border border-industrial-border px-3 py-2 flex items-center gap-2 group">
+                <span class="text-industrial-muted hidden sm:inline-block group-hover:text-industrial-bg">[ INQUIRIES ]</span>
+                <span class="font-bold">GET IN TOUCH</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4 sm:pt-12 sm:pb-8 lg:pt-24 lg:pb-12 relative z-30">
+        <h1 class="text-2xl sm:text-4xl md:text-6xl lg:text-[110px] leading-[1.1] lg:leading-[0.85] font-sans font-bold uppercase tracking-tighter max-w-7xl">
+            I DESIGN THINGS <br> WORTH STOPPING FOR.
+        </h1>
+    </section>
+
+    <!-- Sticky Section Telemetry / Filter Bar -->
+    <div class="sticky top-0 z-40 bg-industrial-bg/95 backdrop-blur-md border-y border-industrial-border">
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex gap-6 overflow-x-auto no-scrollbar text-[10px] sm:text-xs uppercase tracking-widest text-industrial-muted">
+            <a href="#featured" class="hover:text-industrial-fg transition-colors whitespace-nowrap">[ 01 // FEATURED ]</a>
+            <a href="#thumbnails" class="hover:text-industrial-fg transition-colors whitespace-nowrap">[ 02 // THUMBNAILS (16:9) ]</a>
+            <a href="#social" class="hover:text-industrial-fg transition-colors whitespace-nowrap">[ 03 // SOCIAL FEED ]</a>
+            <a href="#contact" class="hover:text-industrial-fg transition-colors whitespace-nowrap">[ 04 // CONTACT ]</a>
+        </div>
+    </div>
+
+    <!-- Featured / Selected Work -->
+    <section id="featured" class="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12 sm:py-16 border-t border-industrial-border relative z-30">
+        <div class="flex justify-between items-end mb-6 sm:mb-12 text-[10px] sm:text-xs uppercase tracking-widest text-industrial-muted">
+            <span>[ SECT // 01 ]</span>
+            <span>< SELECTED WORKS ></span>
+        </div>
+        <h2 class="text-3xl sm:text-6xl font-sans font-bold uppercase tracking-tighter mb-6 sm:mb-12">SELECTED WORK 2026</h2>
+        
+        <div class="flex flex-col gap-8 sm:gap-16">
+            <div id="featured-thumbnails-grid" class="grid grid-cols-1 md:grid-cols-2 border-l border-t border-industrial-border">
+                <!-- Rendered via JS -->
+            </div>
+            <div id="featured-posts-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-l border-t border-industrial-border">
+                <!-- Rendered via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Thumbnails (Elevated above Social) -->
+    <section id="thumbnails" class="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-12 sm:py-16 border-t border-industrial-border relative z-30">
+        <div class="flex justify-between items-end mb-6 sm:mb-12 text-[10px] sm:text-xs uppercase tracking-widest text-industrial-muted">
+            <span>[ SECT // 02 ]</span>
+            <span>< HIGH-CTR ASSETS ></span>
+        </div>
+        <h2 class="text-3xl sm:text-6xl font-sans font-bold uppercase tracking-tighter mb-6 sm:mb-12">HIGH-CTR YOUTUBE THUMBNAILS</h2>
+        
+        <div id="thumbnails-grid" class="grid grid-cols-1 md:grid-cols-2 border-l border-t border-industrial-border">
+            <!-- Rendered via JS -->
+        </div>
+    </section>
+
+    <!-- Social Media Architecture -->
+    <section id="social" class="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-12 sm:py-16 border-t border-industrial-border relative z-30">
+        <div class="flex justify-between items-end mb-6 sm:mb-12 text-[10px] sm:text-xs uppercase tracking-widest text-industrial-muted">
+            <span>[ SECT // 03 ]</span>
+            <span>< GRID SYSTEMS ></span>
+        </div>
+        <h2 class="text-3xl sm:text-6xl font-sans font-bold uppercase tracking-tighter mb-6 sm:mb-12">SOCIAL MEDIA ARCHITECTURE</h2>
+        
+        <div id="posts-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-l border-t border-industrial-border">
+            <!-- Rendered via JS -->
+        </div>
+    </section>
+
+    <!-- Footer / Inquiry -->
+    <section id="contact" class="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-industrial-border relative z-30">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-industrial-border border border-industrial-border">
+            <div class="bg-industrial-bg p-8 sm:p-12 lg:p-16 flex flex-col justify-between">
+                <div>
+                    <span class="text-[10px] sm:text-xs uppercase tracking-widest text-industrial-muted block mb-12">[ DIGITAL INQUIRIES ]</span>
+                    <h2 class="text-4xl sm:text-6xl lg:text-7xl font-sans font-bold uppercase tracking-tighter mb-8 leading-[0.9]">
+                        LET'S MAKE <br> SOMETHING <br> IMPOSSIBLE <br> TO IGNORE.
+                    </h2>
+                </div>
+                <div class="mt-12 text-xs uppercase tracking-widest text-industrial-muted">
+                    <span>< SYSTEM READY_ /></span>
+                </div>
+            </div>
+            
+            <div class="bg-industrial-bg p-8 sm:p-12 lg:p-16 flex flex-col gap-12 border-t lg:border-t-0 border-industrial-border">
+                <div class="flex flex-col gap-4">
+                    <span class="text-[10px] sm:text-xs uppercase tracking-widest text-industrial-muted border-b border-industrial-border pb-4">[ SERVICE PROTOCOLS_ ]</span>
+                    <div class="flex flex-wrap gap-3 mt-4">
+                        <span class="border border-industrial-border px-3 py-1 text-[10px] sm:text-xs uppercase tracking-widest text-industrial-fg bg-[#121212]">[ THUMBNAIL PACKAGING ]</span>
+                        <span class="border border-industrial-border px-3 py-1 text-[10px] sm:text-xs uppercase tracking-widest text-industrial-fg bg-[#121212]">[ SOCIAL CAMPAIGNS ]</span>
+                        <span class="border border-industrial-border px-3 py-1 text-[10px] sm:text-xs uppercase tracking-widest text-industrial-fg bg-[#121212]">[ CHANNEL REBRAND ]</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4 flex-grow justify-center mt-12">
+                    <span class="text-[10px] sm:text-xs uppercase tracking-widest text-industrial-muted">[ INITIATE SECURE TRANSMISSION_ ]</span>
+                    <a href="mailto:hrqadri@gmail.com" class="text-2xl sm:text-4xl lg:text-5xl font-sans font-bold hover:text-industrial-bg hover:bg-industrial-fg border border-industrial-border px-4 py-8 transition-colors break-all flex justify-between items-center group">
+                        <span>HRQADRI@GMAIL.COM</span>
+                        <i class="ph ph-arrow-up-right opacity-50 group-hover:opacity-100"></i>
+                    </a>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-industrial-border flex items-center justify-between">
+                    <span class="text-[10px] sm:text-xs uppercase tracking-widest text-industrial-muted flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-industrial-success"></span>
+                        TYPICAL RESPONSE TIME: < 4 HOURS
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox (Editorial Split-View) -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-industrial-bg/95 backdrop-blur-xl hidden opacity-0 transition-opacity duration-300 flex items-center justify-center font-mono p-0 md:p-8" aria-hidden="true">
+        <!-- Main Modal Container -->
+        <div class="relative w-full h-full md:max-h-[90vh] max-w-[1800px] flex flex-col md:flex-row bg-[#0a0a0a] border border-industrial-border overflow-hidden shadow-2xl">
+            <!-- Close Button -->
+            <button id="lightbox-close" class="absolute top-0 right-0 z-50 px-4 py-3 text-[10px] sm:text-xs uppercase tracking-widest text-industrial-fg hover:text-industrial-bg border-l border-b border-industrial-border bg-[#0a0a0a] hover:bg-industrial-fg transition-colors focus:outline-none focus:ring-1 focus:ring-industrial-fg" aria-label="Close lightbox">
+                [ CLOSE ]
+            </button>
+
+            <!-- Left Side: Image Display (65%) -->
+            <div class="relative w-full md:w-[65%] h-[50vh] md:h-full flex items-center justify-center p-4 sm:p-8 border-b md:border-b-0 md:border-r border-industrial-border bg-[#121212]" id="lightbox-track">
+                <img id="lightbox-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="" class="w-full h-full object-contain mx-auto select-none transition-opacity duration-300 ease-out" draggable="false">
+                
+                <button id="lightbox-prev" class="hidden sm:flex absolute left-4 p-3 text-industrial-fg hover:text-industrial-bg border border-industrial-border bg-industrial-bg hover:bg-industrial-fg transition-colors z-40 focus:outline-none focus:ring-1 focus:ring-industrial-fg" aria-label="Previous image">
+                    <i class="ph ph-caret-left text-xl leading-none"></i>
+                </button>
+                <button id="lightbox-next" class="hidden sm:flex absolute right-4 p-3 text-industrial-fg hover:text-industrial-bg border border-industrial-border bg-industrial-bg hover:bg-industrial-fg transition-colors z-40 focus:outline-none focus:ring-1 focus:ring-industrial-fg" aria-label="Next image">
+                    <i class="ph ph-caret-right text-xl leading-none"></i>
+                </button>
+            </div>
+
+            <!-- Right Side: Telemetry / Brief (35%) -->
+            <div class="w-full md:w-[35%] h-[50vh] md:h-full bg-industrial-bg flex flex-col overflow-y-auto no-scrollbar relative">
+                <!-- Header -->
+                <div class="p-6 border-b border-industrial-border">
+                    <span class="text-[10px] text-industrial-muted uppercase tracking-widest block mb-2">[ CLIENT ]</span>
+                    <h3 id="lightbox-client" class="text-2xl sm:text-3xl font-sans font-bold uppercase tracking-tight text-industrial-fg">CLIENT NAME</h3>
+                </div>
+
+                <!-- Brief & Rationale -->
+                <div class="p-6 flex flex-col gap-8 border-b border-industrial-border flex-grow">
+                    <div>
+                        <span class="text-[10px] text-industrial-muted uppercase tracking-widest block mb-3">[ PROJECT BRIEF ]</span>
+                        <p id="lightbox-brief" class="text-sm text-industrial-fg leading-relaxed"></p>
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-industrial-muted uppercase tracking-widest block mb-3">[ DESIGN RATIONALE / CTR MECHANICS ]</span>
+                        <p id="lightbox-rationale" class="text-sm text-industrial-muted leading-relaxed"></p>
+                    </div>
+                </div>
+
+                <!-- Campaign Assets / Mini Carousel -->
+                <div class="p-6 bg-[#121212]">
+                    <span class="text-[10px] text-industrial-muted uppercase tracking-widest block mb-4">[ CAMPAIGN ASSETS ]</span>
+                    <div id="lightbox-assets-strip" class="flex gap-2 overflow-x-auto no-scrollbar pb-2">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data & Logic -->
+    <script src="portfolio-data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const featThumbsGrid = document.getElementById('featured-thumbnails-grid');
+            const featPostsGrid = document.getElementById('featured-posts-grid');
+            const postsGrid = document.getElementById('posts-grid');
+            const thumbnailsGrid = document.getElementById('thumbnails-grid');
+            
+            // Generate grid card HTML
+            function createCardHTML(item, globalIndex, type) {
+                const formattedId = item.id.replace('item-', '00');
+                
+                if (type === 'thumbnail') {
+                    return `
+                        <article tabindex="0" class="gallery-item bg-industrial-bg group relative cursor-pointer focus:outline-none focus:ring-1 focus:ring-industrial-fg p-3 sm:p-6 flex flex-col gap-2 sm:gap-4 border-r border-b border-industrial-border" data-index="${globalIndex}">
+                            <div class="flex justify-between items-center text-[10px] uppercase tracking-widest text-industrial-muted border-b border-industrial-border pb-2 sm:pb-3">
+                                <span>[ ID: ${formattedId} ]</span>
+                                <span class="text-industrial-bg bg-industrial-muted px-2 py-1 font-bold">[ YOUTUBE PACKAGING ]</span>
+                            </div>
+                            <div class="overflow-hidden relative bg-[#0a0a0a] w-full aspect-video flex items-center justify-center">
+                                <img src="${item.src}" alt="${item.title}" loading="lazy" class="w-full h-full block object-contain absolute inset-0">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 pointer-events-none flex items-center justify-center">
+                                    <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-industrial-fg font-sans font-bold text-lg uppercase tracking-widest border border-industrial-border bg-industrial-bg/80 px-4 py-2 backdrop-blur-sm">< VIEW ASSET ></span>
+                                </div>
+                            </div>
+                            <div class="pt-2 sm:pt-3 border-t border-industrial-border flex flex-col gap-1 sm:gap-2">
+                                <h3 class="text-lg sm:text-xl lg:text-2xl font-sans font-bold uppercase tracking-tight text-industrial-fg">${item.title}</h3>
+                                <span class="text-[10px] text-industrial-muted uppercase tracking-widest">SPEC: 16:9 4K // CTR: +18.2% LIFT // STATUS: LIVE</span>
+                            </div>
+                        </article>
+                    `;
+                } else {
+                    return `
+                        <article tabindex="0" class="gallery-item social-item bg-industrial-bg group relative cursor-pointer focus:outline-none focus:ring-1 focus:ring-industrial-fg p-3 sm:p-4 flex flex-col gap-2 sm:gap-4 border-r border-b border-industrial-border" data-index="${globalIndex}">
+                            <div class="flex justify-between items-center text-[10px] uppercase tracking-widest text-industrial-muted border-b border-industrial-border pb-2 sm:pb-3">
+                                <span>[ ID: ${formattedId} ]</span>
+                                <span>[ SOCIAL ARCHITECTURE ]</span>
+                            </div>
+                            <div class="overflow-hidden relative bg-[#0a0a0a] w-full aspect-square flex items-center justify-center">
+                                <img src="${item.src}" alt="${item.title}" loading="lazy" class="w-full h-full block object-contain absolute inset-0">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 pointer-events-none"></div>
+                            </div>
+                            <div class="flex flex-col gap-1 sm:gap-2 pt-2 sm:pt-3 border-t border-industrial-border">
+                                <h3 class="text-sm font-sans font-bold uppercase tracking-tight text-industrial-fg truncate pr-4">${item.title}</h3>
+                                <span class="text-[10px] text-industrial-muted uppercase tracking-widest">CAMPAIGN ASSET // 4:5 FEED // HIGH ENGAGEMENT</span>
+                            </div>
+                        </article>
+                    `;
+                }
+            }
+
+            // Distribute Data
+            const allItems = typeof portfolioData !== 'undefined' ? [...portfolioData] : [];
+            
+            // Tier A: Top 2 thumbnails
+            const featuredThumbnails = allItems.filter(i => i.category === 'thumbnail').slice(0, 2);
+            // Tier B: Top 3 social posts
+            const featuredPosts = allItems.filter(i => i.category === 'post').slice(0, 3);
+            
+            const featuredIds = [...featuredThumbnails, ...featuredPosts].map(i => i.id);
+            
+            const remainingThumbnails = allItems.filter(i => i.category === 'thumbnail' && !featuredIds.includes(i.id));
+            const remainingPosts = allItems.filter(i => i.category === 'post' && !featuredIds.includes(i.id));
+
+            // Render to DOM
+            featuredThumbnails.forEach(item => {
+                featThumbsGrid.innerHTML += createCardHTML(item, allItems.indexOf(item), 'thumbnail');
+            });
+
+            featuredPosts.forEach(item => {
+                featPostsGrid.innerHTML += createCardHTML(item, allItems.indexOf(item), 'post');
+            });
+            
+            remainingThumbnails.forEach(item => {
+                thumbnailsGrid.innerHTML += createCardHTML(item, allItems.indexOf(item), 'thumbnail');
+            });
+
+            // Render All Social Posts Immediately
+            remainingPosts.forEach(item => {
+                postsGrid.innerHTML += createCardHTML(item, allItems.indexOf(item), 'post');
+            });
+
+            // Lightbox Elements & Logic
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const btnClose = document.getElementById('lightbox-close');
+            const btnPrev = document.getElementById('lightbox-prev');
+            const btnNext = document.getElementById('lightbox-next');
+            const track = document.getElementById('lightbox-track');
+            const focusableSelectors = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+            
+            let lightboxIndex = 0;
+            let lastFocusedElement = null;
+
+            function openLightbox(index) {
+                lastFocusedElement = document.activeElement;
+                lightboxIndex = index;
+                updateLightboxContent();
+                lightbox.classList.remove('hidden');
+                
+                requestAnimationFrame(() => {
+                    lightbox.classList.remove('opacity-0');
+                    btnClose.focus();
+                });
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.add('opacity-0');
+                setTimeout(() => {
+                    lightbox.classList.add('hidden');
+                    document.body.style.overflow = '';
+                    if (lastFocusedElement) {
+                        lastFocusedElement.focus();
+                    }
+                }, 300);
+            }
+
+            function updateLightboxContent() {
+                const item = allItems[lightboxIndex];
+                lightboxImg.src = item.src;
+                lightboxImg.alt = item.title;
+                
+                // Populate Editorial Panel
+                document.getElementById('lightbox-client').textContent = item.client || 'UNKNOWN CLIENT';
+                document.getElementById('lightbox-brief').textContent = item.brief || '// SYSTEM: BRIEF NOT AVAILABLE';
+                document.getElementById('lightbox-rationale').textContent = item.rationale || '// SYSTEM: RATIONALE NOT AVAILABLE';
+                
+                // Build Campaign Asset Carousel
+                const strip = document.getElementById('lightbox-assets-strip');
+                strip.innerHTML = '';
+                
+                if (item.campaignAssets && item.campaignAssets.length > 0) {
+                    item.campaignAssets.forEach(assetId => {
+                        const assetItem = allItems.find(i => i.id === assetId);
+                        if (assetItem) {
+                            const btn = document.createElement('button');
+                            btn.className = `flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 border transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-industrial-fg overflow-hidden relative ${assetItem.id === item.id ? 'border-industrial-fg opacity-100 ring-1 ring-industrial-fg' : 'border-industrial-border opacity-50 hover:opacity-100'}`;
+                            btn.onclick = () => {
+                                const newIndex = allItems.findIndex(i => i.id === assetId);
+                                if (newIndex !== -1) {
+                                    lightboxIndex = newIndex;
+                                    updateLightboxContent();
+                                }
+                            };
+                            
+                            const img = document.createElement('img');
+                            img.src = assetItem.src;
+                            img.alt = assetItem.title;
+                            img.className = 'w-full h-full object-cover';
+                            
+                            btn.appendChild(img);
+                            strip.appendChild(btn);
+                        }
+                    });
+                }
+            }
+
+            function nextImage() {
+                if (allItems.length <= 1) return;
+                lightboxIndex = (lightboxIndex + 1) % allItems.length;
+                updateLightboxContent();
+            }
+
+            function prevImage() {
+                if (allItems.length <= 1) return;
+                lightboxIndex = (lightboxIndex - 1 + allItems.length) % allItems.length;
+                updateLightboxContent();
+            }
+
+            // Event Delegation for Gallery Cards
+            document.addEventListener('click', (e) => {
+                const card = e.target.closest('.gallery-item');
+                if (card) {
+                    const idx = parseInt(card.dataset.index, 10);
+                    openLightbox(idx);
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                const card = e.target.closest('.gallery-item');
+                if (card && (e.key === 'Enter' || e.key === ' ')) {
+                    e.preventDefault();
+                    const idx = parseInt(card.dataset.index, 10);
+                    openLightbox(idx);
+                }
+            });
+
+            // Lightbox Listeners
+            btnClose.addEventListener('click', closeLightbox);
+            btnNext.addEventListener('click', nextImage);
+            btnPrev.addEventListener('click', prevImage);
+            
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === track || e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            // Keyboard Navigation / Focus Trap
+            document.addEventListener('keydown', (e) => {
+                if (lightbox.classList.contains('hidden')) return;
+                
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') prevImage();
+
+                if (e.key === 'Tab') {
+                    const focusableContent = lightbox.querySelectorAll(focusableSelectors);
+                    if (focusableContent.length === 0) return;
+                    
+                    const firstFocusableElement = focusableContent[0];
+                    const lastFocusableElement = focusableContent[focusableContent.length - 1];
+
+                    if (e.shiftKey) {
+                        if (document.activeElement === firstFocusableElement) {
+                            lastFocusableElement.focus();
+                            e.preventDefault();
+                        }
+                    } else {
+                        if (document.activeElement === lastFocusableElement) {
+                            firstFocusableElement.focus();
+                            e.preventDefault();
+                        }
+                    }
+                }
+            });
+
+            // Touch Swipe
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            track.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+            
+            track.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                if (touchEndX < touchStartX - 40) nextImage();
+                if (touchEndX > touchStartX + 40) prevImage();
+            }, { passive: true });
+        });
+    </script>
+</body>
+</html>
