@@ -288,8 +288,8 @@
                             <video src="${item.videoSrc}" poster="${item.posterSrc}" preload="metadata" muted loop playsinline class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></video>
                             
                             <!-- Center Play / Preview Icon -->
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
-                                <span class="bg-black/60 backdrop-blur-sm text-industrial-fg border border-industrial-border px-4 py-2 font-bold tracking-widest uppercase text-xs shadow-lg">[ ▶ PREVIEW ]</span>
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+                                <span class="bg-black/70 backdrop-blur-sm border border-neutral-600 text-white font-mono text-xs px-3 py-1.5 rounded-sm tracking-wider opacity-85 sm:opacity-90 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105 group-hover:border-white group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]">[ ▶ PREVIEW ]</span>
                             </div>
 
                             <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
@@ -328,8 +328,8 @@
                             </div>
                             <div class="overflow-hidden relative bg-[#0a0a0a] w-full flex-grow flex items-center justify-center min-h-[300px]" onmouseenter="this.querySelector('video').play()" onmouseleave="this.querySelector('video').pause()">
                                 <video src="${item.videoSrc}" poster="${item.posterSrc}" preload="metadata" muted loop playsinline class="w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105"></video>
-                                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
-                                    <span class="bg-black/60 backdrop-blur-sm text-industrial-fg border border-industrial-border px-4 py-2 font-bold tracking-widest uppercase text-xs shadow-lg">[ ▶ PREVIEW ]</span>
+                                <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+                                    <span class="bg-black/70 backdrop-blur-sm border border-neutral-600 text-white font-mono text-xs px-3 py-1.5 rounded-sm tracking-wider opacity-85 sm:opacity-90 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105 group-hover:border-white group-hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]">[ ▶ PREVIEW ]</span>
                                 </div>
                             </div>
                             <div class="pt-2 sm:pt-3 border-t border-industrial-border flex flex-col gap-1 sm:gap-2 mt-auto">
